@@ -4,6 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 sh 'echo "chackout main"'
+                sh 'id'
                 // checkout main
             }
         }
