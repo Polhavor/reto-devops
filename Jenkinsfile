@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh '/var/jenkins_home/workspace/reto-devops-pipeline/app'
+                sh 'cd /var/jenkins_home/workspace/reto-devops-pipeline/app'
                 sh 'npm install'
                 sh 'npm run build'
             }
