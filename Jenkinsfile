@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                sh 'cd ./app'
+                checkout main
             }
         }
         stage('Build') {
