@@ -11,12 +11,12 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'cd /var/jenkins_home/workspace/reto-devops-pipeline/app; npm install'
-                sh 'npm run build'
+                sh 'cd /var/jenkins_home/workspace/reto-devops-pipeline/app; npm run build'
             }
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                sh 'cd /var/jenkins_home/workspace/reto-devops-pipeline/app; npm test'
             }
         }
         stage('Deploy') {
