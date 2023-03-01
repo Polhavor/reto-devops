@@ -11,6 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'cd /var/jenkins_home/workspace/reto-devops-pipeline/app'
+                sh 'pwd'
+                sh 'ls -la'
                 sh 'npm install'
                 sh 'npm run build'
             }
