@@ -3,11 +3,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout main
+                sh 'echo "chackout main"'
+                // checkout main
             }
         }
         stage('Build') {
             steps {
+                sh '/var/jenkins_home/workspace/reto-devops-pipeline/app'
                 sh 'npm install'
                 sh 'npm run build'
             }
