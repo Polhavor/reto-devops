@@ -8,14 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'cd ./app'
                 sh 'npm install'
                 sh 'npm run build'
             }
         }
         stage('Test') {
             steps {
-                sh 'cd ./app'
                 sh 'npm test'
             }
         }
